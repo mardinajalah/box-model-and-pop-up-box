@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+.container-box {
+    padding: 20px;
+    width: 100%;
+    margin-top: 100px;
+}
+
+.box {
+    width: 36.3%;
+    margin: auto;
+    padding: 10px;
+}
+
+.box-items {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    padding: 35px;
+    background-color: darkslategray;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+
+
+/* modal box pop up */
+.box-item-card {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.active {
+    display: flex;
+}
+
+.card-items {
+    position: relative;
+    background-color: #fefefe;
+    color: black;
+    margin: 15% auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    animation: animasiBoxItemCard 0.5s;
+}
+
+.close-icon {
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+}
+
+@keyframes animasiBoxItemCard {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
